@@ -1,34 +1,55 @@
 from random import randint
 
+# кол-во заданий на уровне
 kol_zad = 3
+# всего будет 0, 1, 2 уровни
+level = 0
+
 
 class Summator():
 
-	def enter(self, i):
-		print(f'Вам будет предложено {i} задач')
+	def enter(self, lev, kol_i):
+		print(f'Вам будет предложено {kol_i} задач')
 		
+		# для итерации
 		k = 0
+		# кол-во правильных и неправильных ответов
 		correct = 0
 		wrong = 0
 
-		while k < i:
+		# учитываем сложность и увеличиваем диапазон чисел
+		if lev == 0:
+			t = 10
+		elif lev == 1:
+			t = 100
+		else:
+			t = 1000
+
+		while k < kol_i:
 			k += 1
-			a = randint(0,100)
-			b = randint(0,100)
+			
+			#  случайно генерируем два числа
+			a = randint(0,t)
+			b = randint(0,t)
 			print(f'Сколько будет {str(a)} + {str(b)} = ?')
 			action = input('>')
 
+			# Введем подсчет правильных и неправильных ответов
 			if int(action) == a + b:
 				print('Правильно')
 				correct += 1
 			else:
-				print('Нет')
+				print('Не правильно')
 				wrong += 1
 
+		# Если все ответы правильные, то сразу переходим 
+		# на следующий уровень
 		if wrong == 0:		
 			return print('minusator')
+
+		# Если неправильных ответов больше 0
 		else:
-			print(f'Всего ошибок {wrong}')
+			print(f'Всего ошибок {wrong} из {kol_zad}')
 			print('[1] Идем дальше')
 			print('[2] Заново пройдем и улучшим результат')
 			vibor = input('>')
@@ -36,12 +57,12 @@ class Summator():
 				#Далее напишем без print
 				return print('minusator')	
 			elif vibor == '2':
-				return Summator().enter(kol_zad)	
+				return Summator().enter(level,kol_zad)	
 			else:
-				print('Идем значит дальше')
+				print('Не любим зачит математику?!')
 				#Далее напишем без print
-				return print('minusator')	
+				return print('death')	
 
 
 
-Summator().enter(kol_zad)
+Summator().enter(level,kol_zad)
