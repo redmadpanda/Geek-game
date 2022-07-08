@@ -1,10 +1,5 @@
 from random import randint
 
-# кол-во заданий на уровне
-kol_zad = 3
-# всего будет 0, 1, 2 уровни
-level = 0
-
 
 class Summator():
 
@@ -49,7 +44,7 @@ class Summator():
 
 		# Если неправильных ответов больше 0
 		else:
-			print(f'Всего ошибок {wrong} из {kol_zad}')
+			print(f'Всего ошибок {wrong} из {kol_i}')
 			print('[1] Идем дальше')
 			print('[2] Заново пройдем и улучшим результат')
 			vibor = input('>')
@@ -57,12 +52,10 @@ class Summator():
 				#Далее напишем без print
 				return print('minusator')	
 			elif vibor == '2':
-				return Summator().enter(level,kol_zad)	
+				return Summator().enter(lev,kol_i)	
 			else:
 				print('Не любим зачит математику?!')
 				#Далее напишем без print
 				return print('death')	
 
 
-
-Summator().enter(level,kol_zad)
