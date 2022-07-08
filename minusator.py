@@ -1,6 +1,6 @@
 from random import randint
 
-class Summator():
+class Minusator():
 
 	def enter(self, lev, kol_i):
 		print(f'Вам будет предложено {kol_i} задач')
@@ -39,19 +39,19 @@ class Summator():
 		# Если все ответы правильные, то сразу переходим 
 		# на следующий уровень
 		if wrong == 0:		
-			return print('additor')
+			return print('division')
 
 		# Если неправильных ответов больше 0
 		else:
-			print(f'Всего ошибок {wrong} из {kol_zad}')
+			print(f'Всего ошибок {wrong} из {kol_i}')
 			print('[1] Идем дальше')
 			print('[2] Заново пройдем и улучшим результат')
 			vibor = input('>')
 			if vibor == '1':
 				#Далее напишем без print
-				return print('additor')	
+				return print('division')	
 			elif vibor == '2':
-				return Summator().enter(level,kol_zad)	
+				return Minusator().enter(lev,kol_i)	
 			else:
 				print('Не любим зачит математику?!')
 				#Далее напишем без print
