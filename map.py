@@ -19,7 +19,8 @@ class Map():
 	def __init__(self, start_karta):
 		# запускается только один раз в начале, будет 'summator'
 		self.start_karta = start_karta
-
+		
+	
 	def next_karta(self, karta_name):
 		val = Map.karti.get(karta_name)
 		# возвращает из словаря по названию класс val = Summator()
@@ -28,4 +29,5 @@ class Map():
 
 	def opening_karta(self):
 		return self.next_karta(self.start_karta)
+
 
