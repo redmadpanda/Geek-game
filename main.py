@@ -1,9 +1,7 @@
-from summator import *
-from minusator import *
-from division import *
-from multiplication import *
-# enter(x,y) где x ehjdtym jn 0 до 2, у кол-во задач на уровне
-#Summator().enter(0,3)
-#Minusator().enter(0,2)
-#Division().enter(0,3)
-Multiply().enter(0,3)
+from map import *
+from engine import *
+
+
+lev = input('Введите уровень сложности [0,1,2]: ')
+kol_i = input('Ведите количество задач на уровнях: ')
+Engine(Map('summator'), lev, kol_i).play()
