@@ -41,7 +41,7 @@ class Multiply():
 		# Если все ответы правильные, то сразу переходим 
 		# на следующий уровень
 		if wrong == 0:		
-			return print('finish')
+			return 'finished'
 
 		# Если неправильных ответов больше 0
 		else:
@@ -51,13 +51,13 @@ class Multiply():
 			vibor = input('>')
 			if vibor == '1':
 				#Далее напишем без print
-				return print('finish')	
+				return 'finished'
 			elif vibor == '2':
 				return Multiply().enter(lev,kol_i)	
 			else:
 				print('Не любим зачит математику?!')
 				#Далее напишем без print
-				return print('death')	
+				return 'death'	
 
 
 

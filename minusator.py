@@ -39,7 +39,7 @@ class Minusator():
 		# Если все ответы правильные, то сразу переходим 
 		# на следующий уровень
 		if wrong == 0:		
-			return print('division')
+			return 'division'
 
 		# Если неправильных ответов больше 0
 		else:
@@ -49,13 +49,13 @@ class Minusator():
 			vibor = input('>')
 			if vibor == '1':
 				#Далее напишем без print
-				return print('division')	
+				return 'division'	
 			elif vibor == '2':
 				return Minusator().enter(lev,kol_i)	
 			else:
 				print('Не любим зачит математику?!')
 				#Далее напишем без print
-				return print('death')	
+				return 'death'	
 
 
 
