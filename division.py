@@ -41,7 +41,7 @@ class Division():
 		# Если все ответы правильные, то сразу переходим 
 		# на следующий уровень
 		if wrong == 0:		
-			return print('multiplication')
+			return 'multiplication'
 
 		# Если неправильных ответов больше 0
 		else:
@@ -51,13 +51,13 @@ class Division():
 			vibor = input('>')
 			if vibor == '1':
 				#Далее напишем без print
-				return print('multiplication')	
+				return 'multiplication'
 			elif vibor == '2':
 				return Division().enter(lev,kol_i)	
 			else:
 				print('Не любим зачит математику?!')
 				#Далее напишем без print
-				return print('death')	
+				return 'death'
 
 
 
